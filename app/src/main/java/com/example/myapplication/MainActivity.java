@@ -84,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.button_2:
+                mResult.append(mB2.getText());
+                break;
+
+            case R.id.button_3:
                 mResult.append(mB3.getText());
                 break;
 
@@ -91,9 +95,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mResult.append(mB4.getText());
                 break;
 
-            case R.id.button_4:
-                mResult.append(mB4.getText());
-                break;
 
             case R.id.button_5:
                 mResult.append(mB5.getText());
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_point:
                 mResult.append(mBPoint.getText());
                 break;
+
 
 
         }
