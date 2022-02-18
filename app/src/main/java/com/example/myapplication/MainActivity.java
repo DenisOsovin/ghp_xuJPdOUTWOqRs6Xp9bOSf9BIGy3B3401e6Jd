@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mB7;
     private Button mB8;
     private Button mB9;
-    private Button mB10;
     private Button mB0;
     private Button mBPoint;
     private Button mBPlus;
@@ -75,10 +74,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.button_0:
+                mResult.append(mB0.getText());
+                break;
 
-        //не знаю, как получить значение в result
+            case R.id.button_1:
+                mResult.append(mB1.getText());
+                break;
+
+            case R.id.button_2:
+                mResult.append(mB3.getText());
+                break;
+
+            case R.id.button_4:
+                mResult.append(mB4.getText());
+                break;
+
+            case R.id.button_4:
+                mResult.append(mB4.getText());
+                break;
+
+            case R.id.button_5:
+                mResult.append(mB5.getText());
+                break;
+
+            case R.id.button_6:
+                mResult.append(mB6.getText());
+                break;
+
+            case R.id.button_7:
+                mResult.append(mB7.getText());
+                break;
+
+            case R.id.button_8:
+                mResult.append(mB8.getText());
+                break;
+
+            case R.id.button_9:
+                mResult.append(mB9.getText());
+                break;
+
+            case R.id.button_point:
+                mResult.append(mBPoint.getText());
+                break;
 
 
-        mResult.setText("Вы получили число...");
+        }
     }
 }
