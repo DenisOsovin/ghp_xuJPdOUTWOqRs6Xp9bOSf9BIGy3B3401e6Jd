@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTheme(getAppTheme(R.style.CalcButtonStyle));
         setContentView(R.layout.activity_main);
         initThemeChooser();
+
+
 
         //связываем объеты с элементами в layout
         B1 = (Button) findViewById(R.id.button_1);
@@ -100,6 +103,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
+
+        Intent newHome=new Intent(this, newHome.class);
+        startActivity(newHome);
+        newHome.putExtra("R.style.CalcButtonStyle", R.style.CalcButtonStyle);
+
         float value1=0;
         //parseFloat распознает число с плавающей точкой.
         value1= Float.parseFloat((E1).getText().toString());
