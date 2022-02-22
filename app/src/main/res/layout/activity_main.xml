@@ -4,44 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/CalcButtonStyle"
     android:orientation="horizontal"
     android:gravity="center"
     android:layout_columnSpan="3"
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView1"
+    <EditText
+        android:id="@+id/edittext1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="result"/>
+        android:hint="@string/num1"/>
+
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/num2"/>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/result"/>
 
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="1"/>
 
-        <Button
+            android:text="@string/_1"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_2"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
-            android:text="2"/>
 
-        <Button
+            android:text="@string/_2"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_3"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
-            android:text="3"/>
+
+            android:text="@string/_3"/>
 
     </TableRow>
 
@@ -49,26 +58,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="4"/>
 
-        <Button
+            android:text="@string/_4"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_5"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
-            android:text="5"/>
 
-        <Button
+            android:text="@string/_5"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_6"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
-            android:text="6"/>
+
+            android:text="@string/_6"/>
 
     </TableRow>
 
@@ -76,26 +79,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="7"/>
 
-        <Button
+            android:text="@string/_7"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_8"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
-            android:text="8"/>
 
-        <Button
+            android:text="@string/_8"/>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_9"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
-            android:text="9"/>
+
+            android:text="@string/_9"/>
 
     </TableRow>
 
@@ -103,19 +100,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="0"
+
+            android:text="@string/_0"
             android:layout_span="2"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_point"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
+
             android:text="."
             />
 
@@ -126,33 +119,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
+
             android:text="+"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_minus"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
+
             android:text="-"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_multiplication"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
+
             android:text="*"/>
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_division"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
+
             android:text="/"/>
 
 
@@ -162,14 +147,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_equally"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="30sp"
+
             android:layout_span="4"
             android:text="="/>
     </TableRow>
+
+    <RadioGroup
+        android:id="@+id/radioButtons"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonCalcButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/calc_button_style"/>
 
 
     <androidx.core.widget.NestedScrollView

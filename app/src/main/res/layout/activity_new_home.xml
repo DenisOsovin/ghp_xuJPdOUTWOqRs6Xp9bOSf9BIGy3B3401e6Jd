@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/CalcButtonStyle"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_columnSpan="3"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/num1"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioButtons"/>
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/radioButtonCalcButtonStyle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/calc_button_style"/>
+
+</TableLayout>
