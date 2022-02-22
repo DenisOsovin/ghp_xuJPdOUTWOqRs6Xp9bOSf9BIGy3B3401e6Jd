@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,12 +36,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText E2;
     private String Count ="";
 
-
+    public static final String appTheme="App_theme";
+    public static final int CalcButtonStyle=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme(R.style.CalcButtonStyle));
         setContentView(R.layout.activity_main);
+        initThemeChooser();
 
         //связываем объеты с элементами в layout
         B1 = (Button) findViewById(R.id.button_1);
@@ -60,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         E1= (EditText) findViewById(R.id.edittext1);
         E2= (EditText) findViewById(R.id.edittext2);
 
-
         //добавляем нажатие всех кнопок
 
         B1.setOnClickListener(this);
@@ -79,6 +85,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BDivision.setOnClickListener(this);
         BEqually.setOnClickListener(this);
     }
+
+    private void initThemeChooser() {
+        initRadioButton(findViewById(R.id.radioButtonCalcButtonStyle), calcButtonStyle);
+        RadioGroup rg = findViewById(R.id.radioButtons);
+        ((MaterialRadioButton)rg.getChildAt(getCodeStyle(calcButtonStyle))).setChecked(true);
+    }
+
+    private int getAppTheme(int calcButtonStyle) {
+        return codeStyleToStyleId(getCodeStyle(codeStyle));
+    }
+
+
 
     @Override
     public void onClick(View view) {

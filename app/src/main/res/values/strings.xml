@@ -15,5 +15,7 @@
     <string name="_0">0</string>
     <string name="num1">введите число 1</string>
     <string name="num2">введите число 2</string>
+    <string name="calc_button_style">Стиль моей кнопки</string>
+
 
 </resources>

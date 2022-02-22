@@ -154,6 +154,15 @@
             android:text="="/>
     </TableRow>
 
+    <RadioGroup
+        android:id="@+id/radioButtons"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonCalcButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/calc_button_style"/>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_height="wrap_content"
